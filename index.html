@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainability Tracker - Air Travel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Air Travel CO₂ Emissions Tracker </h1>
+        
+        <label for="distance">Enter Distance Traveled (in miles):</label>
+        <input type="number" id="distance" placeholder="Enter miles traveled" required>
+
+        <label for="travelClass">Select Travel Class:</label>
+        <select id="travelClass">
+            <option value="economy">Economy</option>
+            <option value="business">Business</option>
+            <option value="first">First Class</option>
+        </select>
+
+        <button onclick="calculateCO2()">Calculate CO₂ Emissions</button>
+
+        <div id="resultBox" class="result" style="display:none;">
+            <div class="result_text">
+                <p><strong> 🍃CO₂ Emissions:</strong> <span id="co2Amount"></span> kg</p>
+            </div>
+        </div>
+        
+        <div id="alternativesBox" class="alternatives" style="display:none;">
+            <p><strong>Alternative Transport Comparison:</strong></p>
+            <ul>
+                <li>🚆 Train: <span id="trainCO2"></span> kg</li>
+                <li>🚗 Electric Car: <span id="electricCarCO2"></span> kg</li>
+            </ul>
+            <p><strong>Carbon Offset Suggestion:</strong></p>
+            <p>You need to plant a total of  <span id="treesNeeded"></span> trees to offset this flight. 🌳 </p>
+            <p> <a href="https://rippleafrica.org/company-tree-planting/?gad_source=1&gclid=CjwKCAiAtYy9BhBcEiwANWQQLw7SyUL8w_rtSS_fv-qVnkQqKbx7wheoDC5tsfmtqnvsgEmk9fV5oRoCPNgQAvD_BwE" target="_blank">Support Reforestation Projects 💚</a></p>
+        </div>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
